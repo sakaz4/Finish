@@ -1,0 +1,124 @@
+.headerWrapper {
+    width: 100%;
+    height: 66px;
+    display: flex;
+    color: #F38015;
+    background:rgba(94, 89, 89, 0.8);
+    
+}
+
+.menuToggle {
+    opacity: 0;
+}
+
+.menuBtn {
+    position: relative;
+    left: 300px;
+    display: flex; 
+    align-items: center; 
+    margin-right: 50px;
+    top: -4px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menuBtn > span,
+.menuBtn > span::before,
+.menuBtn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+}
+.menuBtn > span::before {
+    content: '';
+    top: -8px;
+}
+
+.menuBtn > span::after {
+    content: '';
+    top: 8px;
+}
+
+.menuBox {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: white;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+
+.menuItem {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.menuItem:hover {
+    background-color: #CFD8DC;
+}
+
+.menuToggle:checked ~ .menuBtn > span {
+    transform: rotate(45deg);
+}
+
+.menuToggle:checked ~ .menuBtn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+.menuToggle:checked ~ .menuBtn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+.menuToggle:checked ~ .menuBox {
+    visibility: visible;
+    left: 0;
+}
+
+.img {
+    height: 100%;
+}
+
+.search {
+    position: absolute;
+    top: 10px;
+    left: 34%;
+    width: 444px;
+}
+
+input {
+    width: 100%;
+    height: 46px;
+}
+
+input:valid {
+    font-family: "Post No Bills Colombo";
+    font-size: 30px;
+	color: #F38015;
+    text-align: center;
+}
+
+::placeholder {
+    font-family: "Post No Bills Colombo";
+    font-size: 30px;
+	color: #F38015;
+    text-align: center;
+}

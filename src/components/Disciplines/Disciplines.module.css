@@ -1,0 +1,68 @@
+.disPage {
+    background-image: url(../img/select.jpg);
+    height: 95vh;
+    overflow:hidden; 
+}
+.selectWrapper {
+    position: relative;
+    left: 14vw;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 59px;
+    
+    
+}
+
+.select {
+    text-align: center;
+    margin-top: 0;
+    color: #F38015;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.dh, .xc, .road, .cx {
+    width: 500px;
+    height: 300px;
+    border: 4px solid rgba(243, 128, 21, 0.47);
+    box-sizing: border-box;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.selectWrapper p {
+    border-radius: 0px 0px 22px 22px;
+    position: relative;
+    top: -63px;
+    width: 493px;
+    color: rgba(243, 128, 21);
+    background: rgba(94, 89, 89, 0.8);
+}
+
+.ride {
+    position: relative;
+    top: 20px;
+}
+
+.selectWrapper img {
+    border-radius: 24px;
+    width: 492px;
+    height: 292px;
+}
+
+
+
+p.toolTip {
+    font-family: "Post No Bills Colombo";
+    color: #F38015;
+}
+
+p.toolTip::before{
+    font-family: "Post No Bills Colombo";
+    color: #F38015;
+}
+
+p.tooltip:hover::before {
+    opacity: 1;
+}

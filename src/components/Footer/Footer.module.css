@@ -4,15 +4,18 @@
     bottom: 0px;
     width: 100%;
     height: 63px;
-    background:rgba(94, 89, 89, 0.8);
+    background:rgba(94, 89, 89, 0.9);
     text-align: center;
 }
 
 .contacts {
+    position: fixed;
+    width: 100%;
+    z-index: 4;
     margin-top: auto;
     margin-bottom: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.6fr 1fr 1fr 1fr;
     
 }
 
@@ -21,5 +24,74 @@
     font-family: "Post No Bills Colombo";
     font-size: 24px;
     color: #F38015;
+}
+
+.contLink a {
+    margin-top: 8px;
+    font-family: "Post No Bills Colombo";
+    font-size: 24px;
+    color: #F38015;
+}
+
+
+@media screen and (max-width: 1280px) {
+
+
+    .contacts {
+        grid-template-columns:  0.75fr 1fr 1fr 1fr;
+    }
+
+    .contacts p, .contacts a {
+        font-size: 20px;
+    }
+
+    .contLink {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1152px) {
+
+    .contacts p, .contacts a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .contacts p, .contacts a {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+
+    .contacts {
+        grid-template-columns: 0.6fr 1fr 1fr 1fr;
+    }
+
+    .contacts p {
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 6px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .contacts p {
+        font-size: 13px;
+        line-height: 16px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .contacts p {
+        font-size: 11px;
+        line-height: 15px;
+    }
 }
 

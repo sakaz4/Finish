@@ -1,3 +1,103 @@
 * {
     margin: 0;
 }
+
+.roadPage {
+    background-image: url(../img/road/sistemsix.jpg);
+    height: 98vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.roadWrapper {
+    position: relative;
+    left: 14vw;
+    top: 64px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 20px;
+}
+
+.aeroad, .dogma, .reacto {
+    width: 500px;
+    height: 300px;
+    border: 4px solid rgba(243, 128, 21, 0.9);
+    box-sizing: border-box;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.roadWrapper p {
+    border-radius: 0px 0px 22px 22px;
+    position: relative;
+    top: -49px;
+    width: 100%;
+    color: rgba(243, 128, 21);
+    background: rgba(94, 89, 89, 0.8);
+}
+
+.aeroad > img, .dogma > img, .reacto > img {
+    position: relative;
+    width: 100%;
+}
+
+@media screen and (max-width: 1440px) {
+    .roadWrapper {
+        grid-row-gap: 40px;
+    }
+
+    .aeroad, .dogma, .reacto {
+        height: 240px;
+        width: 400px;
+    }
+
+    .roadWrapper img {
+        height: 232px;
+        width: 392px;
+    }
+
+    .roadWrapper p {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .roadWrapper p {
+        top: -36px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .aeroad, .dogma, .reacto {
+        height: 90%;
+        width: 90%;
+    }
+
+    .roadWrapper img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .roadWrapper{
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .aeroad, .dogma, .reacto {
+        height: 150px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .aeroad, .dogma, .reacto {
+        height: 120px;
+        width: 200px;
+    }
+}

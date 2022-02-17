@@ -19,7 +19,7 @@ function Disciplines() {
 
 			<div className={styles.selectWrapper}>
 				<div className={styles.dh}><Link to="/disciplines/dh/" ><img src={dhimg} height="292px" width="492px" alt="dh" /><p className={styles.toolTip} data-tip="Катание на велосипеде с горы">Downhill</p><ReactTooltip /></Link></div>
-				<div className={styles.xc}><Link to="/disciplines/xc/"><img src={xcImg} height="292px" width="492px" alt="xc"/><p className={styles.toolTip} data-tip="Вверх вниз на квадратном глазу">Cross Country</p><ReactTooltip /></Link></div>
+				<div className={styles.xc}><Link to="./xc/"><img src={xcImg} height="292px" width="492px" alt="xc"/><p className={styles.toolTip} data-tip="Вверх вниз на квадратном глазу">Cross Country</p><ReactTooltip /></Link></div>
 				<div className={styles.road}><Link to="/disciplines/road/"><img src={roadImg} height="292px" width="492px" alt="road"/><p className={styles.toolTip} data-tip="Утюжка асфальта с чрезвычайно серьёзнопафосными щами">Road Racing</p><ReactTooltip /></Link></div>
 				<div className={styles.cx}><Link to="/disciplines/cx/"><img src={cxImg} height="292px" width="492px" alt="cx"/><p className={styles.toolTip} data-tip="Месить грязь, страдать в песке и бегать с велосипедом на плече">Cyclocross</p></Link></div>
 			</div>

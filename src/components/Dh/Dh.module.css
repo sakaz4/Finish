@@ -1,3 +1,111 @@
 * {
     margin: 0;
 }
+
+* {
+    margin: 0;
+}
+
+.dhPage {
+    background-image: url(../img/dh/bgi.jpg);
+    height: 98vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.dhWrapper {
+    position: relative;
+    left: 14vw;
+    top: 64px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 20px;
+}
+
+.gambler, .intense, .sender, .session {
+    width: 500px;
+    height: 300px;
+    border: 4px solid rgba(243, 128, 21, 0.9);
+    box-sizing: border-box;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.dhWrapper p {
+    border-radius: 0px 0px 22px 22px;
+    position: relative;
+    top: -49px;
+    width: 493px;
+    color: rgba(243, 128, 21);
+    background: rgba(94, 89, 89, 0.8);
+}
+
+.gambler  > img, .intense  > img, .sender  > img, .session  > img {
+    position: relative;
+    width: 100%;
+    border-radius: 22px;
+}
+
+
+@media screen and (max-width: 1440px) {
+    .dhWrapper {
+        grid-row-gap: 40px;
+    }
+
+    .gambler, .intense, .sender, .session {
+        height: 240px;
+        width: 400px;
+    }
+
+    .dhWrapper img {
+        height: 232px;
+        width: 392px;
+    }
+
+    .dhWrapper p,
+    .dhWrapper button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .dhWrapper p {
+        top: -36px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .gambler, .intense, .sender, .session {
+        height: 90%;
+        width: 90%;
+    }
+
+    .dhWrapper img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .dhWrapper{
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .gambler, .intense, .sender, .session {
+        height: 150px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .gambler, .intense, .sender, .session {
+        height: 120px;
+        width: 200px;
+    }
+}

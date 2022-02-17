@@ -1,0 +1,28 @@
+.menu {
+    width: 250px;
+    height: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .menu {
+        width: 160px;
+    }
+
+    .menu a {
+        font-size: 24px;
+        line-height: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .menu {
+        width: 130px;
+    }
+
+    .menu a {
+        font-size: 20px;
+        line-height: 16px;
+    }
+}

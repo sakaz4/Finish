@@ -12,13 +12,12 @@
     margin: 0;
     max-width: 1920px;
     overflow: hidden;
-
 }
 
 .start {
     width: 100%;
     max-width: 100%;
-    overflow-y: hidden; 
+
 }
 
 .pageContainer {
@@ -83,3 +82,102 @@ a {
 
 
 
+@media screen and (max-width: 1280px) {
+    a, p {
+        font-size: 24px;
+        line-height: 32px;
+        
+    }
+
+    .contacts {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .link {
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    a {
+        font-size: 22px;
+    }
+
+    .pageContainer {
+        top: 200px;
+        width: 46%;
+        height: 38%;
+    }
+
+    .pageContainer h3 {
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    .pageContainer p,
+    .pageContainer a {
+        font-size: 22px;
+        line-height: 24px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .pageContainer h3 {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .pageContainer p,
+    .pageContainer a {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .linkWrapper {
+        width: 160px;
+        height: 36px;
+        border: 2px solid rgba(243, 128, 21, 0.47);
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .pageContainer h3 {
+        width: 90%;
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+    .pageContainer p,
+    .pageContainer a {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .pageContainer {
+        width: 160px;
+    }
+
+    .linkWrapper {
+        width: 140px;
+        height: 32px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        padding: 4px;
+    }
+}

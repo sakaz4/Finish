@@ -1,7 +1,8 @@
 .disPage {
     background-image: url(../img/select.jpg);
     height: 95vh;
-    overflow:hidden; 
+    background-position: center;
+    background-size: cover;
 }
 .selectWrapper {
     position: relative;
@@ -10,8 +11,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 59px;
-    
-    
 }
 
 .select {
@@ -35,7 +34,7 @@
     border-radius: 0px 0px 22px 22px;
     position: relative;
     top: -63px;
-    width: 493px;
+    width: 100%;
     color: rgba(243, 128, 21);
     background: rgba(94, 89, 89, 0.8);
 }
@@ -65,4 +64,80 @@ p.toolTip::before{
 
 p.tooltip:hover::before {
     opacity: 1;
+}
+
+@media screen and (max-width: 1440px) {
+    
+    .selectWrapper {
+        grid-row-gap: 40px;
+    }
+
+    .dh, .xc, .road, .cx {
+        height: 240px;
+        width: 400px;
+    }
+
+    .selectWrapper img {
+        height: 232px;
+        width: 392px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .selectWrapper p {
+        top: -40px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .dh, .xc, .road, .cx {
+        height: 90%;
+        width: 90%;
+    }
+
+    .selectWrapper img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .selectWrapper h3 {
+        font-size: 36px;
+        line-height: 110px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .disPage h3 {
+        margin-top: 10px;
+        font-size: 30px;
+        line-height: 34px;
+    }
+
+    .selectWrapper {
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .dh, .xc, .road, .cx {
+        height: 150px;
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .dh, .xc, .road, .cx {
+        height: 120px;
+        width: 200px;
+    }
+
+    .select h3 {
+        width: 90%;
+    }
 }

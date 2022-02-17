@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { MenuContext } from './context/NavState';
 
+import styles from './SideMenu/SideMenu.module.css'
+
 const Menu = styled.nav`
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	bottom: 100px;
-	z-index: 293;
+	z-index: 2;
 	display: block;
-	width: 250px;
 	max-width: 100%;
 	margin-top: 0px;
 	padding-top: 100px;
@@ -19,7 +20,6 @@ const Menu = styled.nav`
 	background-color: rgba(94, 89, 89, 0.8);
 	transform: translateX(-100%);
 	transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-
 ${props =>
     props.open &&
     css`
@@ -54,7 +54,7 @@ export const MenuLink = styled.a`
 export const SideMenu = ({ children }) => {
   const { isMenuOpen } = useContext(MenuContext);
 
-  return <Menu open={isMenuOpen}>{children}</Menu>;
+  return <Menu className={styles.menu} open={isMenuOpen}>{children}</Menu>;
 };
 
 SideMenu.propTypes = {
@@ -67,7 +67,7 @@ SideMenu.defaultProps = {
       <MenuLink href="/">Title page</MenuLink>
       <MenuLink href="/disciplines">Select</MenuLink>
       <MenuLink href="/about">About</MenuLink>
-      <MenuLink href="/contact">Contacts</MenuLink>
+      <MenuLink href="/contacts">Contacts</MenuLink>
     </>
   ),
 };

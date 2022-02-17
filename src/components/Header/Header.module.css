@@ -122,3 +122,40 @@ input:valid {
 	color: #F38015;
     text-align: center;
 }
+
+@media screen and (max-width: 1024px) {
+    input {
+        width: 300px;
+        height: 40px;
+    }
+
+    ::placeholder {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .headerWrapper {
+        height: 50px;
+    }
+
+    input {
+        width: 200px;
+        height: 30px;
+    }
+
+    ::placeholder {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .search {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .search {
+        width: 160px;
+    }
+}

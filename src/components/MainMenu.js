@@ -5,6 +5,8 @@ import { MenuContext } from './context/NavState';
 import HamburgerButton from './HamburgerButton';
 import { SideMenu } from './SideMenu';
 
+import styles from './MainMenu/MainMenu.module.css';
+
 const Navbar = styled.div`
 		display: flex;
 		position: fixed;
@@ -12,7 +14,7 @@ const Navbar = styled.div`
 		right: 0;
 		box-sizing: border-box;
 		outline: currentcolor none medium;
-		max-width: 250px;
+		max-width: 440px;
 		margin: 0px;
 		font-family: "Post No Bills Colombo";
 		font-size: 22px;
@@ -21,8 +23,14 @@ const Navbar = styled.div`
 		min-height: 0px;
 		flex-direction: row;
 		justify-content: flex-start;
-		padding: 0px 20px;
 		z-index: 500;
+
+		@media screen and (max-width: 375px) {
+			h3 {
+				fonst-size: 24px;
+			}
+		}
+    }
 `;
 
 const MainMenu = () => {
@@ -37,7 +45,7 @@ const MainMenu = () => {
 
 	return (
 		<header ref={node}>
-			<Navbar>
+			<Navbar className={styles.navBar}>
 				<HamburgerButton />
 				<h1>J store</h1>
 			</Navbar>

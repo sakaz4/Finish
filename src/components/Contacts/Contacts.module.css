@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+}
+
+.contactsPage {
+    background-image: url(../img/cont.jpg);
+    background-size: cover;
+    height: 1000px;
+}
+
+.contactsWrapper {
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4%;
+}
+
+.contactsWrapper img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.contactsWrapper h3 {
+    width: 90%;
+    font-family: "Post No Bills Colombo";
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #F38015;
+}
+
+#noSales {
+
+    color: red;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: white;
+}
+
+.contactsWrapper p {
+    font-size: 18px;
+    line-height: 20px;
+    color: white;
+    font-weight: 700;
+    
+}
+
+.contLeft, .contRight {
+    background:rgba(94, 89, 89, 0.8);
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+}
+
+.phone {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .contactsWrapper {
+        column-gap: 24px;
+    }
+
+    .contactsWrapper h3 {
+        width: 90%;
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .contactsWrapper p {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .contactsWrapper {
+        column-gap: 10px;
+    }
+
+    .contactsWrapper h3 {
+        font-size: 20px;
+        line-height: 22px;
+    }
+
+    .contactsWrapper p {
+        font-size: 12px;
+        line-height: 14px;    
+    }
+}

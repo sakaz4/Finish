@@ -1,12 +1,108 @@
-.bPage {
-    background-color: #3dcfc2;
+body {
+    background-color: #F38015;
     height: 100vh;
+    background-image: url("../img/fleaMarket.jpg");
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.modalWrapper {
+input:not(:first-child) {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #F38015;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+input:nth-child(2) {
+    margin-top: 20px;
+}
+
+#contactList {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+}
+
+.modal-wrapper {
+    display: grid;
+    position: fixed;
+    height: 30vh;
+    width: 40vw;
+    top: 14%;
+    left: 30%;
+    justify-content: center;
+    align-items: center;
 }
 
 .modalBox {
-    
+    position: relative;
+    background-size: 100%;
+    width: 40vw;
+    height: 290px;
+    padding: 60px;
+    border: #F38015 2px solid;
+}
+
+.close {
+    position: absolute;
+    top: 34px;
+    right: 34px;
+    cursor: not-allowed;
+    border: #F38015 1px solid;
+}
+
+h2 {
+    color: #F38015;
+    text-align: center;
+    height: 24px;
+    line-height: 34px;
+    height: 30px
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    row-gap: 4px;
+    grid-column-gap: 4px;
+}
+
+li {
+    margin-bottom: 10px;
+    background-color: rgba(94, 89, 89, 0.8);
+    width: 300px;
+    font-family: "Post No Bills Colombo";
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+    color: #F38015;
+}
+
+.btnSave {
+    display: flex;
+    justify-content: center;
+    border: #F38015 1px solid;
+}
+
+p {
+    background-color: rgba(94, 89, 89, 0.8);
+    width: 400px;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+button {
+    position: relative;
+    left: calc(50% - 190px);
+    width: 160px;
+    height: 40px;
+    border: #F38015 1px solid;
+    box-sizing: border-box;
+    border-radius: 24px;
+    text-align: center;
+    margin-bottom: 10px;
 }

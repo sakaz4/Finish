@@ -14,7 +14,7 @@
     left: calc(50% - 550px);
     top: calc(50% - 410px);
     width: 100%;
-    display: grid;
+    display: none;
     grid-template-columns: 550px 550px;
     grid-row-gap: 20px;
     grid-column-gap: 20px;
@@ -24,6 +24,37 @@
 .fourStroke,
 .lux,
 .fPod {
+    width: 500px;
+    height: 300px;
+    border: 4px solid rgba(243, 128, 21, 0.9);
+    box-sizing: border-box;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.oiz img,
+.fourStroke img,
+.lux img,
+.fPod img {
+    position: relative;
+    width: 100%;
+}
+
+.xcWrapperZoom {
+    position: relative;
+    left: calc(50% - 550px);
+    top: calc(50% - 410px);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 550px 550px;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+
+.oizZoom,
+.fourStrokeZoom,
+.luxZoom,
+.fPodZoom {
     width: 550px;
     height: 330px;
     border: 4px solid rgba(243, 128, 21, 0.9);
@@ -32,8 +63,8 @@
     text-align: center;
 }
 
-.xcWrapper p,
-.xcWrapper2 p {
+.xcWrapperZoom p,
+.xcWrapper p {
     border-radius: 0px 0px 22px 22px;
     position: relative;
     top: -44px;
@@ -42,169 +73,13 @@
     background: rgba(94, 89, 89, 0.8);
 }
 
-.oiz > img,
-.fourStroke > img,
-.lux > img,
-.fPod > img {
+.oizZoom img,
+.fourStrokeZoom img,
+.luxZoom img,
+.fPodZoom img {
     position: relative;
     width: 100%;
     border-radius: 22px;
-}
-
-.xcWrapper2 {
-    position: relative;
-    left: calc(50% - 550px);
-    top: calc(50% - 410px);
-    width: 100%;
-    display: none;
-    grid-template-columns: 550px 550px;
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
-}
-
-.xcWrapper2 img {
-    width: 100%;
-}
-
-.oizTest,
-.fourStrokeTest,
-.luxTest,
-.fPodTest {
-    width: 550px;
-    height: 330px;
-    border: 4px solid rgba(243, 128, 21, 0.9);
-    box-sizing: border-box;
-    border-radius: 24px;
-    text-align: center;
-}
-
-.oizTest > img,
-.fourStrokeTest > img,
-.luxTest > img,
-.fPodTest > img {
-    position: relative;
-    width: 100%;
-    border-radius: 22px;
-}
-
-@media screen and (max-width: 1440px) {
-    .xcWrapper p {
-        font-size: 30px;
-        line-height: 45px;
-    }
-}
-
-@media screen and (max-width: 1152px) {
-    .xcWrapper {
-        display: none;
-    }
-
-    .xcWrapper2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 40px;
-        position: relative;
-        left: 2%;
-        top: calc(50% - 410px);
-    }
-
-    .xcWrapper2 p {
-        position: relative;
-        top: -42px;
-    }
-
-    .oizTest,
-    .fourStrokeTest,
-    .luxTest,
-    .fPodTest {
-        width: 460px;
-        height: 276px;
-        border: 2px solid rgba(243, 128, 21, 0.9);
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .xcWrapper2 {
-        top: calc(50% - 360px);
-        row-gap: 10px;
-        grid-column-gap: 0px;
-    }
-
-    .xcWrapper2 p {
-        top: -20%;
-    }
-
-    .oizTest,
-    .fourStrokeTest,
-    .luxTest,
-    .fPodTest {
-        width: 90%;
-        height: 83%;
-    }
-
-
-}
-
-@media screen and (max-width: 768px) {
-    .xcWrapper2 {
-        row-gap: 0px;
-        grid-column-gap: 0px;
-        left: 2%;
-    }
-
-    .xcWrapper2 img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .popUp img {
-        width: 90vw;
-        height: auto;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .xcWrapper2 {
-        left: 28%;
-        margin-left: auto;
-        margin-right: auto;
-        grid-template-columns: 1fr;
-        grid-gap: 10px;
-    }
-
-    .xcWrapper2 p {
-        top: -30%;
-        font-size: 20px;
-        height: 30px;
-    }
-
-    .oizTest,
-    .fourStrokeTest,
-    .luxTest,
-    .fPodTest {
-        height: 150px;
-        width: 250px;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .xcWrapper2 {
-        margin-left: auto;
-        margin-right: auto;
-        grid-template-columns: 1fr;
-        grid-gap: 10px;
-        left: 16%;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .oizTest,
-    .fourStrokeTest,
-    .luxTest,
-    .fPodTest {
-        height: 120px;
-        width: 200px;
-    }
 }
 
 .popUp:not(:target) {
@@ -220,6 +95,7 @@
     right: 0;
     background: rgba(0, 0, 0, 0.9);
 }
+
 .imgFull {
     position: absolute;
     top: 50%;
@@ -229,6 +105,15 @@
     z-index: 10;
 }
 
+.close {
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    font-size: 30px;
+    text-decoration: none;
+    color: rgba(243, 128, 21, 0.9);
+  }
+
 .popUpArea {
     position: absolute;
     width: 100%;
@@ -236,3 +121,145 @@
     top: 0;
     left: 0;
 }
+
+@media screen and (max-width: 1440px) {
+
+    .xcWrapperZoom p {
+        font-size: 30px;
+        line-height: 45px;
+    }
+}
+
+@media screen and (max-width: 1152px) {
+
+    .xcWrapperZoom {
+        display: none;
+    }
+
+    .xcWrapper {
+        display: grid;
+        grid-template-columns: 460px 460px;
+        row-gap: 20px;
+        position: relative;
+        left: calc(50% - 476px);
+        top: calc(50% - 364px);
+    }
+
+    .oiz img:first-child,
+    .fourStroke img:first-child,
+    .lux img:first-child,
+    .fPod img:first-child {
+        width: 100%;
+    }
+
+    .xcWrapper p {
+        position: relative;
+        top: -42px;
+    }
+
+    .oiz,
+    .fourStroke,
+    .lux,
+    .fPod {
+        width: 460px;
+        height: 276px;
+        border: 2px solid rgba(243, 128, 21, 0.9);
+    }
+
+    .imgFul {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .oiz,
+    .fourStroke,
+    .lux,
+    .fPod {
+        height: 210px;
+        width: 350px;
+    }
+
+    .oiz img:first-child,
+    .fourStroke img:first-child,
+    .lux img:first-child,
+    .fPod img:first-child {
+        width: 100%;
+        height: 100%;
+    }
+
+    .xcWrapper {
+        grid-row-gap: 10px;
+        row-gap: 10px;
+        left: calc(50% - 350px);
+        top: calc(50% - 360px);
+        grid-template-columns: 350px 350px;
+    }
+
+    .xcWrapper p {
+        position: relative;
+        top: -42px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .xcWrapper {
+        grid-template-columns: 265px 265px;
+        left: calc(50% - 284px);
+    }
+
+    .oiz,
+    .fourStroke,
+    .lux,
+    .fPod {
+        height: 159px;
+        width: 265px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .xcWrapper {
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        left: calc(50% - 135px);
+        top: calc(50% - 400px);
+    }
+
+    .close {
+        display: none;
+    }
+
+    .oiz,
+    .fourStroke,
+    .lux,
+    .fPod {
+        height: 159px;
+        width: 265px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .xcWrapper {
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        top: calc(50% - 400px);
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .xcWrapper p {
+        font-size: 18px;
+        line-height: 21px;
+        top: -31px;
+    }
+}
+

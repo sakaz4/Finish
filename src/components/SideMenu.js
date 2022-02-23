@@ -66,7 +66,7 @@ SideMenu.defaultProps = {
     <>
       <MenuLink href="/">Title page</MenuLink>
       <MenuLink href="/disciplines">Select</MenuLink>
-      <MenuLink href="/about">About</MenuLink>
+      <MenuLink href="/baraholko">Baraholko</MenuLink>
       <MenuLink href="/contacts">Contacts</MenuLink>
     </>
   ),

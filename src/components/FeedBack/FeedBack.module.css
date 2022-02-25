@@ -1,0 +1,143 @@
+body {
+    background-image: url(../img/feedBack.jpg);
+}
+
+body, button, label {
+    font-family: "Post No Bills Colombo";
+    color: #F38015;
+    font-size: 24px;
+}
+
+.btnWrapperBottom button {
+    width: 200px;
+    width: 200px;
+    height: 56px;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    color: #F38015;
+    border: 4px solid rgba(243, 128, 21, 0.47);
+    box-sizing: border-box;
+    border-radius: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.mr2 {
+    width: 400px;
+    left: calc(50% - 200px);
+}
+
+
+.mb3 {
+    width: 400px;
+    position: relative;
+    left: calc(50% - 200px);
+}
+
+.textPanel {
+    display: flex;
+    height: 50px;
+    position: relative;
+    left: 15%;
+}
+
+#formBasicCheckBox {
+    height: 20px;
+}
+
+
+
+form input, label {
+    background:rgba(94, 89, 89, 0.8);
+    padding: 4px;
+}
+
+.modal-content {
+    margin-left: 100px;
+}
+
+#formBasicCheckbox {
+    width: 20px;
+}
+
+form {
+    width: 440px;
+    position: relative;
+    left: calc(50% - 200px);
+    top: 0px;
+}
+
+.title {
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    font-family: "Post No Bills Colombo";
+    font-size: 45px;
+    line-height: 67px;
+    text-align: center;
+    color: #F38015;
+    background:rgba(94, 89, 89, 0.8);
+
+}
+
+.btnWrapperBottom {
+    position: absolute;
+    left: calc(50% - 200px);
+    bottom: 190px;
+}
+
+.btnWrapperBottom button {
+    margin: 10px 10px;
+}
+
+.checkBox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.checkBox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+.checkBox+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.checkBox:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #F38015;
+}
+ 
+.checkBox:not(:disabled):active+label::before {
+    background-color: #F38015;
+    border-color: #F38015;
+}
+ 
+.checkBox:focus+label::before {
+      box-shadow: 0 0 0 0.2rem rgb(61,207,194);
+}
+  
+.checkBox:focus:checked+label::before {
+    border-color: #F38015;
+    background-color: #F38015;
+}
+
+  .checkBox:disabled+label::before {
+    background-color: #e9ecef;
+}

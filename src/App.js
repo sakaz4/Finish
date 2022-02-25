@@ -8,6 +8,8 @@ import Xc from './components/Xc/Xc';
 import Road from './components/Road/Road';
 import Cx from './components/Cx/Cx';
 import Contacts from './components/Contacts/Contacts';
+import FeedBackForm from './components/FeedBack/FeedBackForm';
+
 
 
 function App() {
@@ -22,6 +24,7 @@ function App() {
                 <Route path="/disciplines/road/" element={<Road />}></Route>
                 <Route path="/disciplines/cx/" element={<Cx />}></Route>
                 <Route path="/contacts/" element={<Contacts />}></Route>
+                <Route path="/feedBack/" element={<FeedBackForm />}></Route>
             </Routes>
             <Footer />
         </BrowserRouter>
@@ -30,5 +33,6 @@ function App() {
 
 	);
 }
+
 
 export default App;

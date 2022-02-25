@@ -1,5 +1,7 @@
-body {
+.feedPage {
     background-image: url(../img/feedBack.jpg);
+    width: 100%;
+    height: 90vh;
 }
 
 body, button, label {
@@ -25,10 +27,12 @@ body, button, label {
 
 
 .mr2 {
-    width: 400px;
-    left: calc(50% - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    margin: 10px auto 10px auto;
 }
-
 
 .mb3 {
     width: 400px;
@@ -43,19 +47,9 @@ body, button, label {
     left: 15%;
 }
 
-#formBasicCheckBox {
-    height: 20px;
-}
-
-
-
 form input, label {
     background:rgba(94, 89, 89, 0.8);
     padding: 4px;
-}
-
-.modal-content {
-    margin-left: 100px;
 }
 
 #formBasicCheckbox {
@@ -63,17 +57,17 @@ form input, label {
 }
 
 form {
-    width: 440px;
+    width: 444px;
     position: relative;
-    left: calc(50% - 200px);
+    left: calc(50% - 220px);
     top: 0px;
+    background-color: rgba(94, 89, 89, 0.8);
 }
 
 .title {
     width: 80%;
     margin-top: 10px;
     margin-bottom: 10px;
-
     font-family: "Post No Bills Colombo";
     font-size: 45px;
     line-height: 67px;
@@ -85,8 +79,8 @@ form {
 
 .btnWrapperBottom {
     position: absolute;
-    left: calc(50% - 200px);
-    bottom: 190px;
+    left: calc(50% - 220px);
+    bottom: 222px;
 }
 
 .btnWrapperBottom button {
@@ -140,4 +134,98 @@ form {
 
   .checkBox:disabled+label::before {
     background-color: #e9ecef;
+}
+
+@media screen and (max-width: 768px) {
+
+    .mb3 {
+        width: 100%;
+        position: relative;
+        left: calc(50% - 170px);
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .title {
+        font-size: 38px;
+        line-height: 50px;
+    }
+
+    form {
+
+        left: calc(50% - 222px);
+    }
+
+    label {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    form {
+        display: grid;
+        width: 350px;
+        font-size: 18px;
+        left: calc(50% - 176px);
+    }
+
+    form input:valid {
+        font-size: 20px;
+    }
+        
+    .mb3 {
+        width: 100%;
+        position: relative;
+        left: calc(50% - 140px);
+    }
+
+    form input {
+        width: 160px;
+        font-size: 20px
+    }
+
+    .textPanel {
+        left: 2px;
+    }
+
+    .btnWrapperBottom {
+        display: grid;
+        left: 28%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    form {
+        width: 300px;
+        left: calc(50% - 148px);
+    }
+
+    .textPanel {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .mb4 label {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .btnWrapperBottom {
+        left: 22%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    form {
+        left: calc(50% - 150px);
+    }
 }

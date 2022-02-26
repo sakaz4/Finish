@@ -1,7 +1,5 @@
-.feedPage {
-    background-image: url(../img/feedBack.jpg);
-    width: 100%;
-    height: 90vh;
+body {
+    background: linear-gradient(#9A5044, #E8D9A9) fixed;
 }
 
 body, button, label {
@@ -80,7 +78,7 @@ form {
 .btnWrapperBottom {
     position: absolute;
     left: calc(50% - 220px);
-    bottom: 222px;
+    bottom: 200px;
 }
 
 .btnWrapperBottom button {

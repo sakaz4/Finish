@@ -1,6 +1,5 @@
 import styles from './FeedBack.module.css';
 import React, { useState } from 'react';
-
 import { Button, Form, Modal } from 'react-bootstrap';
 
 const FeedBack = () => {
@@ -11,9 +10,9 @@ const FeedBack = () => {
 return (
     <div className={styles.feedPage}>
         <div className={styles.btnOpen}><Button className={styles.mr2} onClick={handleShow}>Receiving complaints</Button></div>
-        <div className={styles.modalWrapper}>
-            <Modal show={show} onHide={handleClose} animation={false}>
-            <h3 className={styles.title}>Point of psychological assistance</h3>
+            <div className={styles.modalWrapper}>
+                <Modal show={show} onHide={handleClose} animation={false}>
+                <h3 className={styles.title}>Point of psychological assistance</h3>
                 <Modal.Body>
                     <Form action="send.php" method="post">
                         <Form.Group className={styles.mb3} controlId="exampleForm.ControlInput1">
@@ -38,11 +37,11 @@ return (
                         </Form.Group>
                     </Form>
                 </Modal.Body>
-                
-                    <div className={styles.btnWrapperBottom}>
-                        <Button variant="secondary" onClick={handleClose}>close</Button>
-                        <Button variant="primary" type="submit" onClick={handleClose}>send</Button>
-                    </div>
+                    
+                <div className={styles.btnWrapperBottom}>
+                    <Button variant="secondary" onClick={handleClose}>close</Button>
+                    <Button variant="primary" type="submit" onClick={handleClose}>send</Button>
+                </div>
             </Modal>
         </div>
     </div>
